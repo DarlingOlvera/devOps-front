@@ -1,11 +1,12 @@
 <script setup>
-  //
+
+
 </script>
+
 <template>
-  <router-view />
+  <h1>404 No page found</h1>
 </template>
 
 <style scoped>
 
 </style>
-
