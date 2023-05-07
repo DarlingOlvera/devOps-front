@@ -1,11 +1,12 @@
 <script setup>
-  //
+
+
 </script>
+
 <template>
-  <router-view />
+<h1>USUARIOS</h1>
 </template>
 
 <style scoped>
 
 </style>
-
