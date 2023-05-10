@@ -6,6 +6,7 @@
 
 // Components
 import App from './App.vue'
+import './plugins/axios.js'
 
 // Composables
 import { createApp } from 'vue'
