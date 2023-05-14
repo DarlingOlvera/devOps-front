@@ -8,6 +8,9 @@
 import { loadFonts } from './webfontloader'
 import vuetify from './vuetify'
 import router from '../router'
+import './vee-validate'
+
+
 
 export function registerPlugins (app) {
   loadFonts()
