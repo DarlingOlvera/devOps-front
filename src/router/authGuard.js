@@ -1,11 +1,13 @@
 
 const authGuard = async(to, from, next) =>{
 
+  const authenticated = localStorage.getItem("logged")
+
+  if (authenticated === 'true') next()
+  else next({name:'home'})
 
 
 
-  //if(ok) next()
-  //else next({name:'login'})
 }
 
 export default authGuard
