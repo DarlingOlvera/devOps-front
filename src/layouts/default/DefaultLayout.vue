@@ -78,7 +78,7 @@ const {smAndUp} = useDisplay()
   }
   .menu-to{
     text-decoration: none;
-    color: #7C9070;
+    color: #19376D;
 
   }
 </style>

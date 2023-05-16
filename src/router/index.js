@@ -2,26 +2,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import rutasProtegidas from '@/router/protectedRoutes'
 import authGuard from './authGuard'
-
+import Layout from '@/layouts/default/DefaultLayout.vue'
+import Home from '@/views/HomeView.vue'
+import Login from '@/views/LoginView.vue'
+import Signup from '@/views/SignUpView.vue'
+import NoFound from '@/views/NoPageFound.vue'
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/DefaultLayout.vue'),
+    component: Layout,
     children: [
       {
         path:'/',
         name:'home',
-        component:() => import(/* webpackChunkName: "home" */ '@/views/HomeView.vue')
+        component:Home
       },
       {
         path: '/login',
         name: 'login',
-        component: () => import(/* webpackChunkName: "login" */ '@/views/LoginView.vue'),
+        component: Login
       },
       {
         path: '/signup',
         name: 'signup',
-        component: () => import(/* webpackChunkName: "signup" */ '@/views/SignUpView.vue'),
+        component: Signup
       },
       {
         path:'/admin',
@@ -31,7 +35,7 @@ const routes = [
       },
       {
         path:'/:pathMatch(.*)*',
-        component:() => import(/*webpackChunkName:"NoPageFound"*/ '@/views/NoPageFound.vue')
+        component:NoFound
      }
     ],
   },

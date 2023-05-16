@@ -86,6 +86,7 @@ const onSubmit = async() =>{
                 <v-text-field
                 variant="outlined"
                 color="secondary"
+                type="password"
                 placeholder="Password"
                 density="compact"
                 v-model="password"
