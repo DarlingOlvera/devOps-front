@@ -1,3 +1,8 @@
+import usComponent from '@/components/usuariosComponent.vue'
+import cliComponent from '@/components/clientesComponent.vue'
+import venComponent from '@/components/vendedoresComponent.vue'
+import plComponent from '@/components/planesComponent.vue'
+import telComponent from '@/components/telefonosComponent.vue'
 export default {
 
   name:'admin',
@@ -5,27 +10,27 @@ export default {
     {
       path:'/usuarios',
       name:'usuarios',
-      component:() => import('@/components/usuariosComponent.vue')
+      component:usComponent
     },
     {
       path:'/clientes',
       name:'clientes',
-      component:() => import('@/components/clientesComponent.vue')
+      component:cliComponent
     },
     {
       path:'/vendedores',
       name:'vendedores',
-      component:() => import('@/components/vendedoresComponent.vue')
+      component:venComponent
     },
     {
       path:'/planes',
       name:'planes',
-      component:() => import('@/components/planesComponent.vue')
+      component:plComponent
     },
     {
       path:'/telefonos',
       name:'telefonos',
-      component:() => import('@/components/telefonosComponent.vue')
+      component:telComponent
     },
   ]
 

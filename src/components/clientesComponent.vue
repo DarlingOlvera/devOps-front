@@ -4,7 +4,7 @@
 </script>
 
 <template>
-<h1>CLIENTES</h1>
+<h1>Clientes</h1>
 </template>
 
 <style scoped>
