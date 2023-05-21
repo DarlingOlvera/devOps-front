@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en SignUpView should match snaptshot 1`] = `
+<v-container fluid="" class="pa-5 ma-0">
+  <v-row class="d-flex justify-center my-10">
+    <h1 class="text-h2 text-title">Crear cuenta</h1>
+  </v-row>
+  <v-row class="d-flex justify-center">
+    <v-card class="pa-10 rounded-xl elevation-0" width="100%" max-width="500" height="auto">
+      <form-stub as="form" validationschema="[object Object]" validateonmount="false" keepvalues="false" name="signupForm"></form-stub>
+    </v-card>
+  </v-row>
+</v-container>
+`;
