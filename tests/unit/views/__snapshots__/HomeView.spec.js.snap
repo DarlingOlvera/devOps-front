@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en HomeView El html debe coincidir con el snaptshot 1`] = `
+<v-container class="d-flex justify-center align-center px-10" style="height: 100vh;">
+  <div>
+    <h2 class="text-center text-h4 text-title">Su sesión está iniciada</h2>
+    <v-row class="d-flex justify-center my-10"><span class="text-secondary text-subtitle-1">Ahora puede acceder a la ruta que desee</span></v-row>
+    <v-row class="d-flex justify-center">
+      <v-btn color="primary" class="rounded-xl">Cerrar Sesión</v-btn>
+    </v-row>
+  </div>
+</v-container>
+`;

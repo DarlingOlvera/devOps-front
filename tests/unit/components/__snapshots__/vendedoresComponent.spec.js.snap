@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en vendedoresComponent should match snaptshot 1`] = `
+<v-container fluid="" class="pa-10">
+  <v-row class="d-flex justify-center">
+    <h3 class="text-h4 text-title my-10 text-center">Información de vendedores</h3>
+  </v-row>
+  <!--info moviles-->
+  <v-row class="d-flex justify-center">
+    <v-expansion-panels variant="accordion"></v-expansion-panels>
+  </v-row>
+  <vlayoutitem model-value="" position="bottom" class="text-end" size="88">
+    <div class="ma-4">
+      <vbtn icon="fa fa-solid fa-plus" size="large" color="primary" elevation="8"></vbtn>
+    </div>
+  </vlayoutitem>
+</v-container>
+<v-dialog modelvalue="false">
+  <v-card width="100%" max-width="500" class="mx-auto pa-5" height="auto">
+    <v-row class="d-flex justify-center">
+      <h6 class="text-h6 text-title">Llene los datos</h6>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <div class="pa-0" style="width: 80%;"><span class="text-caption text-title">Nombre</span>
+        <v-text-field variant="outlined" modelvalue="" color="secondary" density="comfortable"></v-text-field>
+      </div>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <div class="pa-0" style="width: 80%;"><span class="text-caption text-title">Email</span>
+        <v-text-field variant="outlined" modelvalue="" color="secondary" density="comfortable"></v-text-field>
+      </div>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <div class="pa-0" style="width: 80%;"><span class="text-caption text-title">No. Ventas</span>
+        <v-text-field variant="outlined" modelvalue="0" color="secondary" density="comfortable"></v-text-field>
+      </div>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <div class="pa-0" style="width: 80%;"><span class="text-caption text-title">Hora de entrada</span>
+        <v-text-field variant="outlined" modelvalue="" color="secondary" density="comfortable"></v-text-field>
+      </div>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <div class="pa-0" style="width: 80%;"><span class="text-caption text-title">Hora de salida</span>
+        <v-text-field variant="outlined" modelvalue="" color="secondary" density="comfortable"></v-text-field>
+      </div>
+    </v-row>
+    <v-row class="d-flex justify-center mb-5">
+      <!--v-if-->
+    </v-row>
+  </v-card>
+</v-dialog>
+<v-dialog modelvalue="false">
+  <v-card width="100%" max-width="500" class="mx-auto pa-5" height="auto">
+    <v-row class="d-flex justify-center">
+      <h6 class="text-h6 text-title">¿Está seguro?</h6>
+    </v-row>
+    <v-row class="d-flex justify-center mb-5">
+      <v-btn color="red" class="mx-2">Sí</v-btn>
+      <v-btn color="primary" class="mx-2">No</v-btn>
+    </v-row>
+  </v-card>
+</v-dialog>
+`;
