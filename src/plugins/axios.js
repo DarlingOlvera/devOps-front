@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 //prueba local
-const baseURL = 'http://localhost:3001/uadyfon/api/'
+const baseURL = 'http://localhost:4000/uadyfon/api/'
 
 axios.defaults.baseURL = baseURL
 
