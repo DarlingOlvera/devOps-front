@@ -14,7 +14,7 @@ pipeline{
         stage('deploy container'){
             steps{
                 script{
-                    docker.image(env.IMAGE_NAME).run('--net elastic-network -it -d -p 9000:80')
+                    docker.image(env.IMAGE_NAME).run('--net elastic-network -it -d -p 4000:80')
                 }
             }
         }
