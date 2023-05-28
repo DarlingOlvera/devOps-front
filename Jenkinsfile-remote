@@ -20,15 +20,21 @@ pipeline{
         stage('deploy') {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: '2092d78d-5621-4810-95ef-f3e8c2ebb9c4', keyFileVariable: 'SSH_KEY')]) {
-                    sh '''
-                    sshpass -p jenkins ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v 
-                    cd /
-                    cd devOps-front
-                    sudo systemctl stop nginx
-                    sudo git pull
-                    sudo systemctl start nginx
-                    echo "Script ejecutado correctamente"
-                    '''
+                    script{
+                        def remoteCommand = '''
+                            cd /devOps-front
+                            sudo systemctl stop nginx
+                            sudo git pull
+                            sudo systemctl start nginx
+                            echo "script ejecutado correctamente"
+                        
+                         '''
+
+                        sshagent(['SSH_KEY']){
+                            sh "ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 '${remoteCommand}'"
+                        }
+                    }
+                    
                 }
             }
         }
