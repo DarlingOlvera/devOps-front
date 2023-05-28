@@ -27,6 +27,7 @@ pipeline{
                             cd /devOps-front
                             sudo systemctl stop nginx
                             sudo git pull
+                            npm run build
                             sudo systemctl start nginx
                             echo "script ejecutado correctamente"
                             exit
