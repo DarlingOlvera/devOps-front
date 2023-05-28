@@ -1,0 +1,32 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('checkout'){
+            steps{
+                git url:'https://github.com/DarlingOlvera/devOps-front.git',branch:'develop'
+            }
+        }
+        stage('build'){
+            steps{
+                sh 'npm install'
+            }
+        }
+        stage('testing'){
+            steps{
+                sh 'npm run test:unit'
+            }
+        }
+        stage('deploy') {
+            steps {
+                withCredentials([sshUserPrivateKey(credentialsId: '2092d78d-5621-4810-95ef-f3e8c2ebb9c4', keyFileVariable: 'SSH_KEY')]) {
+                    sh '''
+                    sshpass -p '$SSH_KEY_PASSPHRASE' ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 'bash -s' << 'EOF'
+                    sh 'devOps-front/script.sh'
+                    echo "Script ejecutado correctamente"
+                    EOF20
+                    '''
+                }
+            }
+    }
+}

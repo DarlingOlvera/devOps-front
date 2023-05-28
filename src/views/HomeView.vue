@@ -31,7 +31,7 @@ const logout = () =>{
 
 <template>
   <v-container class="d-flex justify-center align-center px-10" style="height: 100vh;">
-    <div v-if="logged">
+    <div v-if="logged === 'false'">
       <h1 class="text-center text-title">Bienvenido a Uadyfon Api</h1>
       <br>
       <v-row class="text-center text-secondary">
