@@ -23,7 +23,6 @@ pipeline{
                 ]) {
                     script{
 
-                        def sudoPassword = '220600'
 
                         def remoteCommand = '''
                             cd /devOps-front
