@@ -27,11 +27,12 @@ pipeline{
                             sudo git pull
                             sudo systemctl start nginx
                             echo "script ejecutado correctamente"
+                            exit
                         
                          '''
 
                         sshagent(['SSH_KEY']){
-                            sh "sshpass -p jenkins -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v'${remoteCommand}'"
+                            sh "ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v'${remoteCommand}'"
                         }
                     }
                     
