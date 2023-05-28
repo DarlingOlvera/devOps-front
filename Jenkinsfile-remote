@@ -33,9 +33,9 @@ pipeline{
                         
                          '''
 
-                        sshagent(['SSH_KEY']){
-                            sh "sshpass -p jenkins ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v '${remoteCommand}'"
-                        }
+                        
+                        sh "echo jenkins | sshpass -e ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v '${remoteCommand}'"
+                        
                     }
                     
                 }
