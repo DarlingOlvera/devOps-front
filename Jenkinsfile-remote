@@ -27,10 +27,10 @@ pipeline{
 
                         def remoteCommand = '''
                             cd /devOps-front
-                            echo '${sudoPassword}' | sudo -S systemctl stop nginx
+                            sudo -S systemctl stop nginx
                             sudo git pull
                             npm run build
-                            echo '${sudoPassword}' | sudo -S systemctl start nginx
+                            sudo -S systemctl start nginx
                             echo "script ejecutado correctamente"
                             exit
                         
