@@ -22,12 +22,15 @@ pipeline{
                 withCredentials([sshUserPrivateKey(credentialsId: '2092d78d-5621-4810-95ef-f3e8c2ebb9c4', keyFileVariable: 'SSH_KEY'),
                 ]) {
                     script{
+
+                        def sudoPassword = '220600'
+
                         def remoteCommand = '''
                             cd /devOps-front
-                            sudo systemctl stop nginx
+                            echo '${sudoPassword}' | sudo -S systemctl stop nginx
                             sudo git pull
                             npm run build
-                            sudo systemctl start nginx
+                            echo '${sudoPassword}' | sudo -S systemctl start nginx
                             echo "script ejecutado correctamente"
                             exit
                         
