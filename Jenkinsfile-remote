@@ -19,7 +19,9 @@ pipeline{
         }
         stage('deploy') {
             steps {
-                withCredentials([sshUserPrivateKey(credentialsId: '2092d78d-5621-4810-95ef-f3e8c2ebb9c4', keyFileVariable: 'SSH_KEY')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: '2092d78d-5621-4810-95ef-f3e8c2ebb9c4', keyFileVariable: 'SSH_KEY'),
+                string(credentialsId:'2092d78d-5621-4810-95ef-f3e8c2ebb9c4', variable:'SSH_PASSPHRASE')
+                ]) {
                     script{
                         def remoteCommand = '''
                             cd /devOps-front
@@ -32,7 +34,7 @@ pipeline{
                          '''
 
                         sshagent(['SSH_KEY']){
-                            sh "sshpass -p jenkins StrictHostKeyChecking=no -l dmop 192.168.100.243 -v '${remoteCommand}'"
+                            sh "sshpass -p '${SSH_PASSPHRASE}' ssh -o StrictHostKeyChecking=no -l dmop 192.168.100.243 -v '${remoteCommand}'"
                         }
                     }
                     
