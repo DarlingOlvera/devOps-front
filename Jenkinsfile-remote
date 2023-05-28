@@ -27,10 +27,10 @@ pipeline{
 
                         def remoteCommand = '''
                             cd /devOps-front
-                            sudo -S systemctl stop nginx
+                            sudo systemctl stop nginx
                             sudo git pull
                             npm run build
-                            sudo -S systemctl start nginx
+                            sudo systemctl start nginx
                             echo "script ejecutado correctamente"
                             exit
                         
