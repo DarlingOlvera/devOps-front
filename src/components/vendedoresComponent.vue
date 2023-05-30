@@ -131,7 +131,8 @@ const reset = () =>{
           v-for="vendedor in vendedores"
           :value="vendedor.value"
           :key="vendedor.value"
-          elevation="0">
+          elevation="0"
+          >
             <v-expansion-panel-title>
               <h6 class="text-overline text-primary">{{ vendedor.nombre }}</h6>
             </v-expansion-panel-title>
